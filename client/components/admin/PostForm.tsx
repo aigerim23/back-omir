@@ -32,7 +32,7 @@ export default function PostForm({ initial }: Props) {
   const getImageUrl = (path: string) => {
     if (!path) return '';
     if (path.startsWith('http://') || path.startsWith('https://')) return path;
-    return `http://localhost:5000${path}`;
+    return `${process.env.NEXT_PUBLIC_API_URL}${path}`;
   };
 
   const handleImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +45,7 @@ export default function PostForm({ initial }: Props) {
     try {
       const res = await uploadImage(file);
       // Убедитесь, что бэкенд возвращает корректное поле (res.data.url или res.url)
-      const uploadedUrl = res.data?.url || res.url || res.data;
+     const uploadedUrl = res.data?.url || res.data;
       if (uploadedUrl) {
         setImage(uploadedUrl);
       } else {

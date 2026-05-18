@@ -45,7 +45,7 @@ export default function ProjectForm({ initial }: Props) {
     setError('');
     try {
       const res = await uploadImage(file);
-      const uploadedUrl = res.data?.url || res.url || res.data;
+      const uploadedUrl = res.data?.url || res.data;
       if (uploadedUrl) {
         setImage(uploadedUrl);
       } else {

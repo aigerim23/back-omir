@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { getPost } from '@/lib/api'
 import PostForm from '@/components/admin/PostForm'
+export const dynamic = 'force-dynamic'; // Отключает кэш этой страницы в Vercel
 
 export default function EditPostPage() {
   const params = useParams()

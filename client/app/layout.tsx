@@ -4,7 +4,13 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin', 'cyrillic'] })
+
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['300', '400', '500', '700'],
+})
 
 export const metadata: Metadata = {
   title: 'БлагоФонд — Благотворительный фонд',
@@ -17,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru">
-      <body className={`${inter.className} bg-gray-50 flex flex-col min-h-screen`}>
+    <html lang="ru" >
+      <body className={`${roboto.className} bg-gray-50 flex flex-col min-h-screen`}>
         <Navbar />
         <main className="flex-1">
           {children}

@@ -1,0 +1,19 @@
+# Игнорируем зависимости (они весят очень много)
+**/node_modules/
+node_modules/
+
+# Игнорируем секретные файлы с паролями и адресом БД
+**/.env
+.env
+.env.local
+
+# Игнорируем логи ошибок
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Игнорируем папку сборки Next.js
+**/.next/
+.next/
+out/

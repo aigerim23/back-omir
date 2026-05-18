@@ -6,7 +6,18 @@ const api = axios.create({
     'ngrok-skip-browser-warning': 'true' // Этот заголовок отключит проверку ngrok
   }
 })
-
+export const getProject = (id) => {
+  return axios.get(`/api/projects/${id}`, {
+    headers: {
+      'Cache-Control': 'no-cache',
+      'Pragma': 'no-cache',
+      'Expires': '0',
+      'ngrok-skip-browser-warning': 'true' // Чтобы ngrok не блокировал
+    },
+    // Дополнительный трюк: уникальный параметр, чтобы браузер не брал данные из кэша
+    params: { _t: Date.now() } 
+  });
+};
 api.interceptors.request.use((config) => {
   if (typeof window !== 'undefined') {
     const token = localStorage.getItem('token')

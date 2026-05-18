@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { getProject } from '@/lib/api'; // ИСПРАВЛЕНО: Импортируем получение проекта вместо новостей
 import ProjectForm from '@/components/admin/ProjectForm'; // ИСПРАВЛЕНО: Подключаем форму проектов вместо новостей
+export const dynamic = 'force-dynamic'; // Отключает кэш этой страницы в Vercel
 
 export default function EditProjectPage() {
   const params = useParams();

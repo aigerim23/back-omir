@@ -50,7 +50,7 @@ export default function ProjectPage() {
 
       {project.image && (
         <img
-          src={`${process.env.NEXT_PUBLIC_API_URL}${project.image}`}
+          src={`${process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, '')}/${project.image.replace(/^\//, '')}`}
           alt={project.title}
           className="w-full h-72 object-cover rounded-xl mb-8"
         />

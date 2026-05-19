@@ -22,7 +22,7 @@ export default function AboutPage() {
     <div 
       className="min-h-screen bg-[#f4f8fa] pt-28 pb-20 overflow-hidden text-slate-800 relative bg-ornament"
       style={{
-        backgroundImage: "url('/pattern.wepb')",
+        backgroundImage: "url('/pattern.webp')",
         backgroundRepeat: "repeat",
         backgroundSize: "75px auto",
         backgroundAttachment: "fixed"
@@ -67,7 +67,7 @@ export default function AboutPage() {
             <div className="relative w-full max-w-[420px] aspect-[4/3] rounded-[2.8rem] bg-gradient-to-tr from-[#0091d2]/40 via-white/40 to-[#00a5e3]/30 p-2.5 shadow-2xl border border-white/60">
               <div className="w-full h-full rounded-[2.3rem] overflow-hidden bg-white border border-white shadow-inner relative">
                 <img 
-                  src={`${process.env.NEXT_PUBLIC_SITE_URL}/logobg.png`}
+                  src="/logobg.png" 
                   alt="Современная медицина" 
                   className="w-full h-full object-cover"
                 />

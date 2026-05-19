@@ -17,7 +17,7 @@ export default function ProjectCard({ id, title, description, image, goal, colle
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition cursor-pointer">
         {image ? (
           <img
-            src={`http://localhost:5000${image}`}
+            src={`${process.env.NEXT_PUBLIC_API_URL}${image}`}
             alt={title}
             className="w-full h-48 object-cover"
           />

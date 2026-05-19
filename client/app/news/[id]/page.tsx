@@ -58,7 +58,7 @@ export default function PostPage() {
 
       {post.image && (
         <img
-          src={`http://localhost:5000${post.image}`}
+          src={`${process.env.NEXT_PUBLIC_API_URL}${post.image}`}
           alt={post.title}
           className="w-full h-72 object-cover rounded-xl mb-8"
         />

@@ -2,6 +2,7 @@ import axios from 'axios'
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000',
+<<<<<<< HEAD
     headers: {
     'ngrok-skip-browser-warning': 'true' // Этот заголовок отключит проверку ngrok
   }
@@ -18,6 +19,12 @@ export const getProject = (id) => {
     params: { _t: Date.now() } 
   });
 };
+=======
+  headers: {
+    'ngrok-skip-browser-warning': '1',
+  },
+})
+>>>>>>> a712a19 (fix: remove res.url type err19.05.2026or)
 api.interceptors.request.use((config) => {
   if (typeof window !== 'undefined') {
     const token = localStorage.getItem('token')

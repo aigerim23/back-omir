@@ -22,7 +22,7 @@ export default function AboutPage() {
     <div 
       className="min-h-screen bg-[#f4f8fa] pt-28 pb-20 overflow-hidden text-slate-800 relative bg-ornament"
       style={{
-        backgroundImage: "url('/pattern.png')",
+        backgroundImage: "url('/pattern.wepb')",
         backgroundRepeat: "repeat",
         backgroundSize: "75px auto",
         backgroundAttachment: "fixed"
@@ -305,7 +305,7 @@ export default function AboutPage() {
             <div 
               className="absolute inset-0 opacity-15 pointer-events-none mix-blend-overlay"
               style={{
-                backgroundImage: "url('/pattern.png')",
+                backgroundImage: "url('/pattern.jpg')",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "center"
